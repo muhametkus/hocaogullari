@@ -45,12 +45,12 @@ const Navbar = () => {
 
 
   return (
-    <div className={`w-full bg-blue-800 flex items-center fixed z-50  ${isVisible?"":"slideOutUp"} shadow-2xl`}>
+    <div className={`w-full bg-blue-800 flex items-center fixed z-50  ${isVisible?"":"slideOutUp"} ${mobilMenu?"sm:top-0":"sm:flex"} shadow-2xl `}>
       <div className="h-[70px] 2xl:w-[1536px] w-[85%] md:w-[95%] sm:[95%] mx-auto flex justify-between items-center ">
         <div className={`${mobilMenu?"sm:hidden":"sm:flex"} text-white`}>HOCAOĞLU TURİZM</div>
         <div className="flex items-center sm:justify-start sm:absolute sm:w-full z-40 sm:bg-black sm:bg-opacity-75 sm:left-0 sm:top-0 ">
         
-          <ul className={`flex gap-x-5 sm:flex-col sm:z-50 sm:py-5 sm:px-20 sm:bg-red-800 sm:h-screen  ${mobilMenu?"sm:flex ":"sm:hidden "}`}>
+          <ul className={`flex gap-x-5 sm:flex-col sm:z-50 sm:py-5 sm:px-20 sm:bg-red-800 sm:h-screen  ${mobilMenu?"sm:flex ":"sm:hidden "} ${isVisible?"":"mt-7"}`}>
             {Links.map((link) => (
               <li key={link.name} className="text-lg sm:text-xl md:text-base md:my-0 my-7">
                 <a
@@ -66,10 +66,10 @@ const Navbar = () => {
           
         </div>
       </div>
-      <div className={`hidden ${mobilMenu?"sm:hidden":"sm:flex"}`}>
+      <div className={`hidden ${mobilMenu?"sm:hidden":"sm:flex"} `}>
         <button className="text-white text-2xl mr-5" onClick={mobilMenuDegistir}><MenuOutlined /></button>
       </div>
-      <div className={`z-50 hidden ${mobilMenu?"sm:flex":"sm:hidden"}`}><button className="text-white text-2xl mr-5" onClick={mobilMenuDegistir}><CloseOutlined/></button></div>
+      <div className={`z-50 hidden ${mobilMenu?"sm:flex":"sm:hidden"} fixed right-0 ${isVisible?"":"top-14"}`}><button className="text-white text-3xl mr-5" onClick={mobilMenuDegistir}><CloseOutlined/></button></div>
     </div>
   );
 };
