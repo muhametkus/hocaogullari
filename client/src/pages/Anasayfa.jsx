@@ -7,7 +7,7 @@ const Anasayfa = () => {
   return (
     <div className='w-full'>
      <div className='2xl:w-[1899px] w-full mx-auto flex flex-col items-center gap-x-10 sm:gap-x-5 text-white'>
-     <div className='w-full'><Slider/></div>
+     <div className='w-full sm:mt-[70px]'><Slider/></div>
      <Hizmetler/>
      <IletisimComp/>
       
