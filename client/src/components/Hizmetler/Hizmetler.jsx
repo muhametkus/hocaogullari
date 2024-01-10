@@ -11,7 +11,7 @@ const Hizmetler = () => {
         <div className='2xl:w-[1550px] w-[100%] md:w-[95%] sm:[95%] mx-auto flex flex-wrap justify-evenly sm:justify-center sm:gap-y-14 my-10 md:gap-y-14 lg:gap-y-10 xl:gap-y-14 text-black '>
 
         {Hizmetler.map((hizmet) => (
-              <div className="card w-[400px] sm:w-[370px] bg-base-100 shadow-xl bg-blue-600" key={hizmet.hizmetAdi}>
+              <div className="card w-[400px] sm:w-[370px] bg-base-100 shadow-xl pt-5 bg-blue-600" key={hizmet.hizmetAdi}>
               <figure ><div className='bg-white px-8 py-8 rounded-full mt-5'><img className='w-[100px]' src={hizmet.resimLink} alt={hizmet.hizmetAdi} /></div></figure>
               <div className="card-body">
                 <h2 className="card-title mx-auto text-3xl font-light text-white">{hizmet.hizmetAdi}</h2>
