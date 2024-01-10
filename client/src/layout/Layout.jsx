@@ -17,7 +17,7 @@ const currentYear = new Date().getFullYear();
         <Footer/>
         <div className='bg-gray-800 bg-opacity-90 py-2'>
           <div className='mx-auto 2xl:w-[1850px] w-full flex justify-center'>
-            <div className='flex w-[78%] justify-between '>
+            <div className='flex w-[78%] justify-between sm:flex-col sm:gap-y-2 sm:py-2'>
 
             <div className='text-white opacity-40'>Copyright © {currentYear}  Hocaoğulları Turizm Tüm hakları saklıdır.</div>
           <div className='text-white opacity-65'>Kodlama ve Tasarım: Muhammet KUŞ</div>
