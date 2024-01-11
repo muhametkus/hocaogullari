@@ -17,9 +17,9 @@ const Footer = () => {
 <a className="link link-hover" href='/hakkimizda'>Hakkımızda</a>
 </nav> 
 <nav className='text-white opacity-90'>
-<header className="footer-title"><a href="/urunler">Ürünler</a></header> 
-<a className="link link-hover" href="/kapilar">Kapılar</a>
-<a className="link link-hover" href="/dolaplar">Dolaplar</a>
+<header className="footer-title"><a href="/hizmetlerimiz">HİZMETLERİMİZ</a></header> 
+<a className="link link-hover">Öğrenci ve Personel Taşımacılığı</a>
+<a className="link link-hover">Özel Taşımacılık Hizmetleri</a>
 </nav> 
 <nav className='text-white opacity-90'>
 <header className="footer-title">Sosyal Medya</header> 
