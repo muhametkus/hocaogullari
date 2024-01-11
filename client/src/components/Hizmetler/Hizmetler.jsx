@@ -1,5 +1,5 @@
 import React from 'react'
-import './hizmetler.css'
+import './Hizmetler.css'
 const Hizmetler = () => {
   let Hizmetler = [
     { hizmetAdi: "Personel Taşımacılığı", aciklama: "Firmamız konforlu araçlar ve güler yüzlü personel ile bir çok kuruma personel taşımacılığı hizmetini sunmaktadır.", resimLink:"./img/teamwork.png" },

@@ -5,6 +5,7 @@ import {
 } from "@ant-design/icons";
 import { NavbarContext } from "../../context/NavbarProvider"; // NavbarProvider'ın bulunduğu dosya yolu
 import "./Navbar.css"
+import {Link} from "react-router-dom";
 const Navbar = () => {
 
   let Links = [
@@ -53,12 +54,12 @@ const Navbar = () => {
           <ul className={`flex items-center gap-x-5 sm:flex-col sm:z-50 sm:py-5 sm:px-20 sm:bg-red-800 sm:h-screen  ${mobilMenu?"sm:flex ":"sm:hidden "} ${isVisible?"":""}`}>
             {Links.map((link) => (
               <li key={link.name} className="text-lg sm:text-xl md:text-base md:my-0 my-7">
-                <a
-                  href={link.link}
+                <Link
+                  to={link.link}
                   className="text-white  sm:text-white hover:text-gray-400 duration-500"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
             
