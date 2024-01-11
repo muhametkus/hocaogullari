@@ -1,8 +1,12 @@
 import React from 'react'
+import SayfaUstBilgi from '../components/SayfaUstBilgi/SayfaUstBilgi'
 
 const Hakkimizda = () => {
   return (
-    <div>Hakkimizda</div>
+    <>
+    <SayfaUstBilgi SayfaAdi="HAKKIMIZDA"/>
+    
+    </>
   )
 }
 
