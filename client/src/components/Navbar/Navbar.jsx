@@ -57,6 +57,7 @@ const Navbar = () => {
                 <Link
                   to={link.link}
                   className="text-white  sm:text-white hover:text-gray-400 duration-500"
+                  onClick={()=>setMobilMenu(false)}
                 >
                   {link.name}
                 </Link>
