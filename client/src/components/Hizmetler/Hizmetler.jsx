@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './hizmetler.css'
 const Hizmetler = () => {
   let Hizmetler = [
     { hizmetAdi: "Personel Taşımacılığı", aciklama: "Firmamız konforlu araçlar ve güler yüzlü personel ile bir çok kuruma personel taşımacılığı hizmetini sunmaktadır.", resimLink:"./img/teamwork.png" },
@@ -8,7 +8,7 @@ const Hizmetler = () => {
   ];
   return (
     <div className='w-full'>
-        <div className='2xl:w-[1550px] w-[100%] md:w-[95%] sm:[95%] mx-auto flex flex-wrap justify-evenly sm:justify-center sm:gap-y-14 my-10 md:gap-y-14 lg:gap-y-10 xl:gap-y-14 text-black '>
+        <div className='2xl:w-[1550px] w-[100%] md:w-[95%] sm:[95%] mx-auto flex flex-wrap justify-evenly sm:justify-center sm:gap-y-14 my-10 md:gap-y-14 lg:gap-y-10 xl:gap-y-14 text-black tracking-in-expand-fwd-bottom'>
 
         {Hizmetler.map((hizmet) => (
               <div className="card w-[400px] sm:w-[370px] bg-base-100 shadow-xl pt-5 bg-blue-600" key={hizmet.hizmetAdi}>

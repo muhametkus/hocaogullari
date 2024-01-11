@@ -47,7 +47,7 @@ const Navbar = () => {
   return (
     <div className={`w-full bg-blue-800 flex items-center fixed z-50  ${isVisible?"":"slideOutUp"} ${mobilMenu?"sm:top-0":"sm:flex"} shadow-2xl `}>
       <div className="h-[70px] 2xl:w-[1536px] w-[85%] md:w-[95%] sm:[95%] mx-auto flex justify-between items-center ">
-        <div className={`${mobilMenu?"sm:hidden":"sm:flex"} text-white`}>HOCAOĞLU TURİZM</div>
+        <div className={`logo-div font-light text-2xl ${mobilMenu?"sm:hidden":"sm:flex"} text-white`}>HOCAOĞULLARI TURİZM</div>
         <div className="flex items-center sm:justify-start sm:absolute sm:w-full z-40 sm:bg-black sm:bg-opacity-75 sm:left-0 sm:top-0">
         
           <ul className={`flex items-center gap-x-5 sm:flex-col sm:z-50 sm:py-5 sm:px-20 sm:bg-red-800 sm:h-screen  ${mobilMenu?"sm:flex ":"sm:hidden "} ${isVisible?"":"sm:mt-7"}`}>

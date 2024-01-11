@@ -8,8 +8,8 @@ const Footer = () => {
       
   <footer className="footer p-10 text-base-content container mx-auto">
 <aside>
-<img className="h-[50px] border-0" src="./img/logo/logo.png" alt="Logo" />
-<p className='text-white opacity-90'>Hebiloğlu Ahşap<br/>1983'ten beri hizmet vermekte</p>
+<div className='logo-div text-white'>HOCAOĞULLARI TURİZM</div>
+<p className='text-white opacity-90'>1983'ten beri hizmet vermekte</p>
 </aside> 
 <nav className='text-white opacity-90'>
 <header className="footer-title "><a href='/hakkimizda'>Hakkımızda</a></header> 
