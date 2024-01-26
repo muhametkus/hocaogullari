@@ -16,6 +16,7 @@ const Iletisim = () => {
           <div className='flex flex-col text-lg '>
             <a className='flex items-center gap-x-1' href="tel:+902163969781"><PhoneFilled /> <span>0 216 396 97 81</span></a>
             <a className='flex items-center gap-x-1' href="tel:+905559751562"><PhoneFilled /> <span>0 555 975 15 62</span></a>
+            <a className='flex items-center gap-x-1' href='mailto:info@hocaogullariturizm.com.tr'><MailFilled /> <span>info@hocaogullariturizm.com.tr</span></a> 
             <a className='flex items-center gap-x-1' href='mailto:hocaogullariturizm@hotmail.com'><MailFilled /> <span>hocaogullariturizm@hotmail.com</span></a> 
           </div>
         </div>
@@ -37,7 +38,7 @@ const Iletisim = () => {
 
         </div>
         <div className=''>
-          <div className='sm:pl-14 md:pl-28'>
+          <div className='sm:pl-8 md:pl-28'>
             <IletisimFormu/>
           </div>
         </div>
