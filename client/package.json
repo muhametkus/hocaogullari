@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@emailjs/browser": "^3.12.1",
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.1.1",
     "antd": "^5.12.8",
@@ -18,7 +19,8 @@
     "heroicons": "^2.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.1"
+    "react-router-dom": "^6.21.1",
+    "sweetalert2": "^11.10.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

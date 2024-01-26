@@ -2,7 +2,8 @@ import React from 'react'
 import { MailFilled, PhoneFilled } from '@ant-design/icons'
 import IletisimFormu from '../components/IletisimComp/IletisimFormu'
 import SayfaUstBilgi from '../components/SayfaUstBilgi/SayfaUstBilgi'
-
+import emailjs from '@emailjs/browser';
+//import Swal from "sweetalert2";
 const Iletisim = () => {
   return (
     <>
