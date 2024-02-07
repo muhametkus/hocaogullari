@@ -8,7 +8,7 @@ const Anasayfa = () => {
   return (
     <>
      <div className='w-full sm:mt-[70px]'><Slider/></div>
-     <div className='w-full '><h2 className='text-center text-8xl md:text-7xl sm:text-[50px] font-extralight text-slate-800 mt-10 uppercase'>HİZMETLERİMİZ</h2></div>
+     <div className='w-full bg-slate-300'></div>
      <Hizmetler/>
      <div className='w-full '><h2 className='text-center text-8xl md:text-7xl sm:text-[55px] font-extralight text-slate-800 mt-10 mb-5 uppercase'>Görseller</h2></div>
      <Gorseller/>

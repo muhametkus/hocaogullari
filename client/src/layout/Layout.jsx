@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         <Navbar />
       </NavbarProvider>
       <div className="w-full">
-      <div className="2xl:w-[1899px] w-full mx-auto flex flex-col mt-8 sm:mt-7">{children}</div>
+      <div className="2xl:w-[1920px] w-full mx-auto flex flex-col mt-8 sm:mt-7">{children}</div>
       </div>
       <Footer />
       <div className="bg-gray-800 bg-opacity-90 py-2">
