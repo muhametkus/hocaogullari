@@ -51,12 +51,12 @@ const Navbar = () => {
         <div className={`logo-div font-light text-2xl ${mobilMenu?"sm:hidden":"sm:flex"} text-white`}>HOCAOĞULLARI TURİZM</div>
         <div className="flex items-center sm:justify-start sm:absolute sm:w-full z-40 sm:bg-black sm:bg-opacity-75 sm:left-0 sm:top-0">
         
-          <ul className={`flex items-center gap-x-5 sm:flex-col sm:z-50 sm:py-5 sm:px-20 sm:bg-red-800 sm:h-screen  ${mobilMenu?"sm:flex ":"sm:hidden "} ${isVisible?"":""}`}>
+          <ul className={`flex items-center gap-x-5 sm:flex-col sm:z-50 sm:py-5 sm:px-20 sm:bg-blue-950 sm:h-screen  ${mobilMenu?"sm:flex ":"sm:hidden "} ${isVisible?"":""}`}>
             {Links.map((link) => (
               <li key={link.name} className="text-lg sm:text-xl md:text-base md:my-0 my-7">
                 <Link
                   to={link.link}
-                  className="text-white  sm:text-white hover:text-gray-400 duration-500"
+                  className="text-white  sm:text-white sm:text-opacity-85 hover:text-gray-400 duration-500"
                   onClick={()=>setMobilMenu(false)}
                 >
                   {link.name}
