@@ -1,40 +1,113 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
+import { PhoneOutlined, MailOutlined, EnvironmentOutlined, ArrowRightOutlined } from '@ant-design/icons';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
- <>
-  
-  <div className='w-full flex justify-center mx-auto bg-gray-600 text-white'>
-      
-  <footer className="footer p-10 text-base-content container mx-auto">
-<aside>
-<div className='logo-div text-white'>HOCAOĞULLARI TURİZM</div>
-<p className='text-white opacity-90'>1983'ten beri hizmet vermekte</p>
-</aside> 
-<nav className='text-white opacity-90'>
-<header className="footer-title "><a href='/hakkimizda'>Hakkımızda</a></header> 
-<a className="link link-hover" href='/iletisim'>İletişim</a>
-<a className="link link-hover" href='/hakkimizda'>Hakkımızda</a>
-</nav> 
-<nav className='text-white opacity-90'>
-<header className="footer-title"><a href="/hizmetlerimiz">HİZMETLERİMİZ</a></header> 
-<a className="link link-hover">Öğrenci ve Personel Taşımacılığı</a>
-<a className="link link-hover">Özel Taşımacılık Hizmetleri</a>
-</nav> 
-<nav className='text-white opacity-90'>
-<header className="footer-title">Sosyal Medya</header> 
-<div className="grid grid-flow-col gap-4 ">
-<a className='hover:text-blue-300 duration-300' href=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
-<a className='hover:text-blue-300 duration-300' href=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-<a className='hover:text-blue-300 duration-300' href=''><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-</div>
+    <footer className="bg-brand-950 text-gray-300">
+      <div className="h-1 bg-gradient-to-r from-brand-600 via-brand-400 to-brand-600" />
 
-</nav>
-</footer>
-</div>
- </>
+      <div className="page-container py-12 sm:py-14">
+        <div className="grid grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 gap-8 sm:gap-10">
 
-  )
-}
+          <div className="lg:col-span-1">
+            <div className="mb-4">
+              <img src="./img/hocaogullari-logo.png" alt="Hocaoğulları Turizm" className="h-12 w-auto object-contain brightness-0 invert opacity-90" />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-5">
+              1983'ten beri güvenli, dakik ve konforlu taşımacılık hizmeti sunuyoruz.
+            </p>
+            <Link
+              to="/teklif-al"
+              className="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 text-sm font-medium transition-colors"
+            >
+              Teklif Alın <ArrowRightOutlined className="text-xs" />
+            </Link>
+          </div>
 
-export default Footer
+          <div>
+            <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase mb-5">
+              Hızlı Erişim
+            </h3>
+            <ul className="space-y-3">
+              {[
+                { label: 'Anasayfa', to: '/' },
+                { label: 'Hakkımızda', to: '/hakkimizda' },
+                { label: 'Hizmetlerimiz', to: '/hizmetlerimiz' },
+                { label: 'İletişim', to: '/iletisim' },
+                { label: 'Teklif Al', to: '/teklif-al' },
+              ].map(link => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-brand-600 group-hover:bg-brand-400 transition-colors" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase mb-5">
+              Hizmetlerimiz
+            </h3>
+            <ul className="space-y-3">
+              {['Personel Taşımacılığı', 'Öğrenci Taşımacılığı', 'Özel Taşımacılık'].map(s => (
+                <li key={s}>
+                  <span className="text-gray-400 text-sm flex items-center gap-2">
+                    <span className="w-1 h-1 rounded-full bg-brand-600" />
+                    {s}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-bold text-xs tracking-[0.2em] uppercase mb-5">
+              İletişim
+            </h3>
+            <ul className="space-y-4">
+              <li>
+                <a href="tel:+902163969781" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                  <PhoneOutlined className="text-brand-500 mt-0.5 text-sm flex-shrink-0" />
+                  <span className="text-sm">0 216 396 97 81</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@hocaogullariturizm.com.tr" className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group">
+                  <MailOutlined className="text-brand-500 mt-0.5 text-sm flex-shrink-0" />
+                  <span className="text-sm break-all">info@hocaogullariturizm.com.tr</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-3 text-gray-400">
+                <EnvironmentOutlined className="text-brand-500 mt-0.5 text-sm flex-shrink-0" />
+                <span className="text-sm leading-relaxed">
+                  Fevziçakmak mh. Cemal Gürsel cd. No:115/31<br />
+                  Kaynarca, Pendik / İstanbul
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/5">
+        <div className="page-container py-4 flex flex-col sm:flex-col-reverse items-center justify-between gap-2">
+          <span className="text-gray-500 text-xs">
+            &copy; {currentYear} Hocaoğulları Turizm. Tüm hakları saklıdır.
+          </span>
+          <a href="https://muhammetkus.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-400 transition-colors text-xs">
+            Kodlama &amp; Tasarım: Muhammet KUŞ
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

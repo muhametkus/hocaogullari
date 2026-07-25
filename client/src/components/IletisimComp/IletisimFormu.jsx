@@ -1,47 +1,56 @@
-import React from "react";
+import { SendOutlined } from '@ant-design/icons';
 
 const IletisimFormu = (props) => {
   return (
-    <div className="w-full flex flex-col gap-y-4">
-        <h2 className="text-5xl font-light">İLETİŞİM FORMU</h2>
-        <p className="">
-          Formu Doldurarak ve Telefon Numaramız Üzerinden bize ulaşabilirsiniz
-        </p>
-        <div className="flex flex-col ">
-          <label className="form-control w-full max-w-xs ">
-            <div className="label">
-              <span className={`label-text ${props.labelClass}`}>Ad ve Soyad:</span>
-            </div>
-            <input
-              type="text"
-              placeholder="Ad Soyad"
-              className={`input input-bordered w-full max-w-xs ${props.inputClass}`}
-            />
+    <div className="w-full">
+      <h2 className={`text-2xl font-bold mb-1 ${props.titleClass || 'text-brand-950'}`}>
+        İletişim Formu
+      </h2>
+      <p className={`text-sm mb-6 ${props.subtitleClass || 'text-gray-500'}`}>
+        Formu doldurarak en kısa sürede size dönüş yapıyoruz.
+      </p>
+
+      <div className="space-y-4">
+        <div>
+          <label className={`block text-xs font-semibold mb-1.5 uppercase tracking-wider ${props.labelClass}`}>
+            Ad ve Soyad
           </label>
-
-          <label className="form-control w-full max-w-xs">
-            <div className="label">
-              <span className={`label-text ${props.labelClass}`}>Telefon Numarası:</span>
-            </div>
-            <input
-              type="text"
-              placeholder="Telefon Numarası"
-              className={`input input-bordered w-full max-w-xs ${props.inputClass}`}
-            />
-          </label>
-
-          <label className="form-control w-full max-w-xs">
-            <div className="label">
-              <span className={`label-text ${props.labelClass}`}>Mesajınız:</span>
-            </div>
-            <textarea className={`textarea textarea-bordered ${props.inputClass}`} placeholder="Mesajınız"></textarea>
-
-          </label>
-
-          <div className="w-full max-w-xs my-3 flex"><button className={`btn btn-outline mx-auto ${props.butonClass}`}>Gönder</button></div>
-
+          <input
+            type="text"
+            placeholder="Örn: Ahmet Yılmaz"
+            className={`w-full px-4 py-3 rounded border text-sm outline-none focus:ring-2 focus:ring-brand-200 transition-all ${props.inputClass}`}
+          />
         </div>
+
+        <div>
+          <label className={`block text-xs font-semibold mb-1.5 uppercase tracking-wider ${props.labelClass}`}>
+            Telefon Numarası
+          </label>
+          <input
+            type="tel"
+            placeholder="0 5__ ___ __ __"
+            className={`w-full px-4 py-3 rounded border text-sm outline-none focus:ring-2 focus:ring-brand-200 transition-all ${props.inputClass}`}
+          />
+        </div>
+
+        <div>
+          <label className={`block text-xs font-semibold mb-1.5 uppercase tracking-wider ${props.labelClass}`}>
+            Mesajınız
+          </label>
+          <textarea
+            className={`w-full px-4 py-3 rounded border text-sm outline-none focus:ring-2 focus:ring-brand-200 transition-all resize-none h-28 ${props.inputClass}`}
+            placeholder="Taşımacılık ihtiyacınızı kısaca açıklayın..."
+          />
+        </div>
+
+        <button
+          className={`w-full flex items-center justify-center gap-2 py-3.5 rounded text-sm font-semibold tracking-wide transition-all duration-200 ${props.butonClass}`}
+        >
+          <SendOutlined className="text-xs" />
+          Mesajı Gönder
+        </button>
       </div>
+    </div>
   );
 };
 
